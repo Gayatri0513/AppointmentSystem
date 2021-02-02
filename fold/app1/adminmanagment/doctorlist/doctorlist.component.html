@@ -1,0 +1,32 @@
+
+<app-header></app-header>
+
+
+
+
+<div id ="body" class="container "  style="max-width:700px">
+    <h2 class="text-center text-success">Confirmed Doctor Details</h2>
+    <br><br>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+       
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let doctor of doctors">
+        
+        <td>{{doctor.firstName}}</td>
+        <td>{{doctor.lastName}}</td>
+        <td>{{doctor.email}}</td>
+        <td><button class="btn btn-danger" (click)="updateDoctor(doctor)"> Update Doctor</button></td>
+      </tr>
+      </tbody>
+    </table>
+    <br><br>
+    </div>
+    <br><br><br><br><br><br>

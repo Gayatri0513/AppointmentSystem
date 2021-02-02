@@ -1,0 +1,21 @@
+<papp-header></papp-header>
+<h1 class ="text-center">Feedback Form</h1>
+<br><br><br>
+
+<div class="container" style="max-width:600px">
+  
+  <form   #loginForm='ngForm' (ngSubmit)="onSubmitClick()" >
+   
+    <label for="app">Appointment Id</label>
+    <input type="text" id="app" name="app"  placeholder="Appoinment Id" [(ngModel)]="appointmentId" required >
+    <span  *ngIf="flag" class="text-danger">** Invalid AppointmentId Plz enter correct one</span>
+   
+    <br><br>
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px" [(ngModel)]="feedback"></textarea>
+    
+
+    <button [disabled]="loginForm.form.invalid" type="submit" class="btn btn-success">Submit</button>
+   
+  </form>
+</div>

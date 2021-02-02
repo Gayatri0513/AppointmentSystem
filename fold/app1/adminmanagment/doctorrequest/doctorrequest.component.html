@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+
+<div id ="body" class="container "  style="max-width:660px">
+    <h2 class="text-center text-danger"> Pending Doctor Request </h2> <br><br>
+   <h2 class="text-danger">{{msg}}</h2>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let doctor of doctors" >
+        <td class="hidden"></td>
+        <td>{{doctor.firstName}}</td>
+        <td>{{doctor.lastName}}</td>
+        <td>{{doctor.email}}</td>
+        <td><button class="btn btn-danger" (click)="approvedUser(doctor)"> Approved Doctor</button></td>
+      </tr>
+      </tbody>
+    </table>
+    <br><br>
+    </div>
+    <br><br><br><br><br><br>
+
+  
+   
+      
